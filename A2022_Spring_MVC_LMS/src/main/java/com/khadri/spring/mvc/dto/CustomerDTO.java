@@ -1,6 +1,7 @@
-package com.khadri.spring.mvc.entity;
+package com.khadri.spring.mvc.dto;
 
-public class Customer {
+public class CustomerDTO {
+
 	private String firstName;
 	private String lastName;
 	private String fatherName;
@@ -93,14 +94,6 @@ public class Customer {
 
 	public void setCurrentAddress(String currentAddress) {
 		this.currentAddress = currentAddress;
-	}
-
-	public String getCibilScore() {
-		return cibilScore;
-	}
-
-	public void setCibilScore(String cibilScore) {
-		this.cibilScore = cibilScore;
 	}
 
 	public String getPermanentAddress() {

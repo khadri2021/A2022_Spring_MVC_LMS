@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: Dell
 Build-Jdk: 17.0.4.1
+=======
+Built-By: babja
+Build-Jdk: 20.0.2
+>>>>>>> origin/Feature_3
 Created-By: Maven Integration for Eclipse
 

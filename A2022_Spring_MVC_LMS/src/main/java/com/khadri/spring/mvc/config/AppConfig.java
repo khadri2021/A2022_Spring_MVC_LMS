@@ -9,8 +9,14 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+<<<<<<< HEAD
 @Configuration
 @ComponentScan(basePackages = { "com.khadri.spring.mvc"})
+=======
+import com.khadri.spring.mvc.utility.LoanAccount;
+
+@Configuration
+@ComponentScan(basePackages = { "com.khadri.spring.mvc" })
 @PropertySource("classpath:DB.properties")
 public class AppConfig {
 
@@ -23,6 +29,8 @@ public class AppConfig {
 	public ModelAndView modelAndView() {
 		return new ModelAndView();
 	}
+		
+
 	
 	@Bean
 	public DbProperties dbProperties() {
@@ -35,6 +43,7 @@ public class AppConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource(dbProperties.getUrl(),
 				dbProperties.getUserName(), dbProperties.getPassword());
 		
+
 		dataSource.setDriverClassName(dbProperties.getDriverClass());
 
 		JdbcTemplate jdbcTemplate = new JdbcTemplate();
@@ -44,5 +53,9 @@ public class AppConfig {
 	}
 
 	
+	@Bean
+	public LoanAccount loanAccount() {
+		return new LoanAccount();
+	}
 
 }

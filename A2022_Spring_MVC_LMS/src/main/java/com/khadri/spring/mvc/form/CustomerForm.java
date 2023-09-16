@@ -1,6 +1,7 @@
-package com.khadri.spring.mvc.entity;
+package com.khadri.spring.mvc.form;
 
-public class Customer {
+public class CustomerForm {
+
 	private String firstName;
 	private String lastName;
 	private String fatherName;
@@ -11,10 +12,10 @@ public class Customer {
 	private String accountType;
 	private String currentAddress;
 	private String permanentAddress;
-	private String aadhaarNumber;
+	private String adhaarNumber;
 	private String panNumber;
 	private String nomineeName;
-	private String nomineeAadhaarNumber;
+	private String nomineeAdhaarNumber;
 	private String nomineeAccountNumber;
 	private String loanEligible;
 	private String accountNumber;
@@ -95,14 +96,6 @@ public class Customer {
 		this.currentAddress = currentAddress;
 	}
 
-	public String getCibilScore() {
-		return cibilScore;
-	}
-
-	public void setCibilScore(String cibilScore) {
-		this.cibilScore = cibilScore;
-	}
-
 	public String getPermanentAddress() {
 		return permanentAddress;
 	}
@@ -111,12 +104,12 @@ public class Customer {
 		this.permanentAddress = permanentAddress;
 	}
 
-	public String getAadhaarNumber() {
-		return aadhaarNumber;
+	public String getAdhaarNumber() {
+		return adhaarNumber;
 	}
 
-	public void setAadhaarNumber(String aadhaarNumber) {
-		this.aadhaarNumber = aadhaarNumber;
+	public void setAdhaarNumber(String adhaarNumber) {
+		this.adhaarNumber = adhaarNumber;
 	}
 
 	public String getPanNumber() {
@@ -135,12 +128,12 @@ public class Customer {
 		this.nomineeName = nomineeName;
 	}
 
-	public String getNomineeAadhaarNumber() {
-		return nomineeAadhaarNumber;
+	public String getNomineeAdhaarNumber() {
+		return nomineeAdhaarNumber;
 	}
 
-	public void setNomineeAadhaarNumber(String nomineeAadhaarNumber) {
-		this.nomineeAadhaarNumber = nomineeAadhaarNumber;
+	public void setNomineeAdhaarNumber(String nomineeAdhaarNumber) {
+		this.nomineeAdhaarNumber = nomineeAdhaarNumber;
 	}
 
 	public String getNomineeAccountNumber() {
@@ -175,11 +168,11 @@ public class Customer {
 		this.loanAccountNumber = loanAccountNumber;
 	}
 
-	public String getLType() {
+	public String getlType() {
 		return lType;
 	}
 
-	public void setLType(String lType) {
+	public void setlType(String lType) {
 		this.lType = lType;
 	}
 

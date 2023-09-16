@@ -2,19 +2,17 @@ package com.khadri.spring.mvc.config;
 
 import org.springframework.beans.factory.annotation.Value;
 
-
-
 public class DbProperties {
 
 	@Value("${DRIVER_CLASS}")
 	private String driverClass;
-	
+
 	@Value("${URL}")
-	private String url;
-	
+	private String url;	
+
 	@Value("${USER}")
 	private String userName;
-	
+
 	@Value("${PASSWORD}")
 	private String password;
 
@@ -49,10 +47,5 @@ public class DbProperties {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
-	
-	
-	
-	
+
 }
