@@ -1,4 +1,4 @@
-package com.khadri.spring.mvc.dto;
+package com.khadri.spring.mvc.loan.dto;
 
 public class CustomerDTO {
 

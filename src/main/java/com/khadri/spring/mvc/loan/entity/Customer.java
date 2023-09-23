@@ -1,7 +1,6 @@
-package com.khadri.spring.mvc.form;
+package com.khadri.spring.mvc.loan.entity;
 
-public class CustomerForm {
-
+public class Customer {
 	private String firstName;
 	private String lastName;
 	private String fatherName;
@@ -12,10 +11,10 @@ public class CustomerForm {
 	private String accountType;
 	private String currentAddress;
 	private String permanentAddress;
-	private String adhaarNumber;
+	private String aadhaarNumber;
 	private String panNumber;
 	private String nomineeName;
-	private String nomineeAdhaarNumber;
+	private String nomineeAadhaarNumber;
 	private String nomineeAccountNumber;
 	private String loanEligible;
 	private String accountNumber;
@@ -104,12 +103,12 @@ public class CustomerForm {
 		this.permanentAddress = permanentAddress;
 	}
 
-	public String getAdhaarNumber() {
-		return adhaarNumber;
+	public String getAadhaarNumber() {
+		return aadhaarNumber;
 	}
 
-	public void setAdhaarNumber(String adhaarNumber) {
-		this.adhaarNumber = adhaarNumber;
+	public void setAadhaarNumber(String aadhaarNumber) {
+		this.aadhaarNumber = aadhaarNumber;
 	}
 
 	public String getPanNumber() {
@@ -128,12 +127,12 @@ public class CustomerForm {
 		this.nomineeName = nomineeName;
 	}
 
-	public String getNomineeAdhaarNumber() {
-		return nomineeAdhaarNumber;
+	public String getNomineeAadhaarNumber() {
+		return nomineeAadhaarNumber;
 	}
 
-	public void setNomineeAdhaarNumber(String nomineeAdhaarNumber) {
-		this.nomineeAdhaarNumber = nomineeAdhaarNumber;
+	public void setNomineeAadhaarNumber(String nomineeAadhaarNumber) {
+		this.nomineeAadhaarNumber = nomineeAadhaarNumber;
 	}
 
 	public String getNomineeAccountNumber() {
@@ -168,11 +167,11 @@ public class CustomerForm {
 		this.loanAccountNumber = loanAccountNumber;
 	}
 
-	public String getlType() {
+	public String getLType() {
 		return lType;
 	}
 
-	public void setlType(String lType) {
+	public void setLType(String lType) {
 		this.lType = lType;
 	}
 

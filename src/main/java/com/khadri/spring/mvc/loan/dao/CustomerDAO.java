@@ -1,4 +1,4 @@
-package com.khadri.spring.mvc.dao;
+package com.khadri.spring.mvc.loan.dao;
 
 import java.util.Optional;
 
@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.khadri.spring.mvc.entity.Customer;
+import com.khadri.spring.mvc.loan.entity.Customer;
 
 @Repository
 public class CustomerDAO {

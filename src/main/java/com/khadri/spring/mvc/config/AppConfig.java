@@ -9,7 +9,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import com.khadri.spring.mvc.utility.LoanAccount;
+import com.khadri.spring.mvc.loan.utility.LoanAccount;
 
 @Configuration
 @ComponentScan(basePackages = { "com.khadri.spring.mvc" })

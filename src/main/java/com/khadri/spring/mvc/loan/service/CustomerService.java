@@ -1,13 +1,13 @@
-package com.khadri.spring.mvc.service;
+package com.khadri.spring.mvc.loan.service;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.khadri.spring.mvc.dao.CustomerDAO;
-import com.khadri.spring.mvc.dto.CustomerDTO;
-import com.khadri.spring.mvc.entity.Customer;
+import com.khadri.spring.mvc.loan.dao.CustomerDAO;
+import com.khadri.spring.mvc.loan.dto.CustomerDTO;
+import com.khadri.spring.mvc.loan.entity.Customer;
 
 @Service
 public class CustomerService {

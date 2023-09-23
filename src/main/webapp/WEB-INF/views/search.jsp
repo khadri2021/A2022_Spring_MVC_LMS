@@ -1,4 +1,4 @@
-<%@ page import="com.khadri.spring.mvc.form.CustomerForm"%>
+<%@ page import="com.khadri.spring.mvc.loan.form.CustomerForm"%>
 <%@ page import="java.util.Objects"%>
 
 <html>

@@ -1,4 +1,4 @@
-package com.khadri.spring.mvc.utility;
+package com.khadri.spring.mvc.loan.utility;
 
 import java.util.Random;
 

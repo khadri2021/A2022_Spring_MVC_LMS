@@ -1,4 +1,4 @@
-package com.khadri.spring.mvc.controller;
+package com.khadri.spring.mvc.loan.controller;
 
 import java.util.Optional;
 
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.khadri.spring.mvc.dto.CustomerDTO;
-import com.khadri.spring.mvc.form.CustomerForm;
-import com.khadri.spring.mvc.service.CustomerService;
-import com.khadri.spring.mvc.utility.LoanAccount;
+import com.khadri.spring.mvc.loan.dto.CustomerDTO;
+import com.khadri.spring.mvc.loan.form.CustomerForm;
+import com.khadri.spring.mvc.loan.service.CustomerService;
+import com.khadri.spring.mvc.loan.utility.LoanAccount;
 
 @Controller
 public class CustomerController {
@@ -28,7 +28,7 @@ public class CustomerController {
 	@Autowired
 	private LoanAccount loanAccount;
 
-	@RequestMapping("/")
+	@RequestMapping("/loanhomepage")
 	public String homePage() {
 		return "home";
 	}
