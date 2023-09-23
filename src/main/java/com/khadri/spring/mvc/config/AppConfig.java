@@ -7,11 +7,13 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.khadri.spring.mvc.loan.utility.LoanAccount;
 
 @Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = { "com.khadri.spring.mvc" })
 @PropertySource("classpath:DB.properties")
 public class AppConfig {
@@ -49,5 +51,4 @@ public class AppConfig {
 	public LoanAccount loanAccount() {
 		return new LoanAccount();
 	}
-
 }

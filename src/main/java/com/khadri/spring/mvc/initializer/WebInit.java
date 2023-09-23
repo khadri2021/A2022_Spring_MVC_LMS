@@ -4,7 +4,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import com.khadri.spring.mvc.config.AppConfig;
 
-public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -14,6 +14,7 @@ public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServlet
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		return new Class[] { AppConfig.class };
+
 	}
 
 	@Override

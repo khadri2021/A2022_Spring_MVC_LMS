@@ -3,7 +3,6 @@ package com.khadri.spring.mvc.config;
 import org.springframework.beans.factory.annotation.Value;
 
 public class DbProperties {
-
 	@Value("${DRIVER_CLASS}")
 	private String driverClass;
 
@@ -47,5 +46,4 @@ public class DbProperties {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }
