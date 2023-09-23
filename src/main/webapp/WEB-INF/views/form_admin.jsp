@@ -9,13 +9,13 @@
 			<td colspan="2" align="center" height="50"> <a href="addpage">Add Account</a></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="center" height="50> <a href="view/all/registers">Modify Account</a></td>
+			<td colspan="2" align="center" height="50"> <a href="view/all/registers">Modify Account</a></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="center" height="50> <a href="viewpage">View Account</a></td>
+			<td colspan="2" align="center" height="50"> <a href="viewpage">View Account</a></td>
 		</tr>
 		<tr>
-			<td colspan="2" align="center" height="50> <a href="delete/all/registers">Delete Account</a></td>
+			<td colspan="2" align="center" height="50"> <a href="delete/all/registers">Delete Account</a></td>
 		</tr>
 	</table>
 </body>
