@@ -12,9 +12,9 @@
 <meta charset="ISO-8859-1">
 <title>Home Page</title>
 </head>
-<body bgcolor="#66ff66">
+<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>WELCOME TO LOAN MANAGEMENT SYSTEM</h1>
+		<h1>WELCOME TO SBI LOAN MANAGEMENT SYSTEM</h1>
 		<hr>
 		<h3>
 			<a href="customer/search">Click Here</a> To Search For Existing

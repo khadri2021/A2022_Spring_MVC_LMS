@@ -11,10 +11,11 @@
 </style>
 <title>Search Page</title>
 </head>
-<body bgcolor="#66ff66">
+<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>SEARCH PAGE</h1>
-		<hr>
+	<h1>SBI BANK LOAN APPLICATION</h1>
+	<hr>
+		<h1><u>SEARCH PAGE</u></h1>
 		<form action="checkeligibility" method="post">
 			ACCOUNT NUMBER : <input type="text" name="accountNumber"><br>
 			<br> <input type="submit" value="Search">

@@ -30,7 +30,7 @@ public class CustomerController {
 
 	@RequestMapping("/loanhomepage")
 	public String homePage() {
-		return "home";
+		return "loanhomepage";
 	}
 
 	@RequestMapping("customer/search")

@@ -12,7 +12,7 @@
 <meta charset="ISO-8859-1">
 <title>Invalid</title>
 </head>
-<body bgcolor="#ff6666">
+<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
 		<h1>
 			INVALID ACCOUNT NUMBER <br> <a href="search">Click Here</a> To

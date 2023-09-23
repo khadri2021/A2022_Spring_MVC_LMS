@@ -10,15 +10,17 @@
 }
 
 mark {
-	background-color: blue;
+	background-color: #ffccf3;
 	color: green;
 }
 </style>
 <meta charset="ISO-8859-1">
 <title>Eligible</title>
 </head>
-<body bgcolor="#66ff66">
+<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
+	<h1>SBI BANK LOAN APPLICATION</h1>
+	<hr>
 		<h1>
 			<mark> You Are Eligible For Applying Loan </mark>
 			<br> <br>
@@ -26,9 +28,10 @@ mark {
 			String accountNumber = (String) request.getAttribute("accountNumber");
 			%>
 			<a href="createform?accountNumber=<%=accountNumber%>">Click Here</a>
-			For Apply Loan <br> <br> <a href="search">Click Here</a> To
+			For Apply Loan <br> <br> 
+			</h1>
+			<a href="search">Click Here</a> To
 			Go Previous Page
-		</h1>
 	</div>
 </body>
 </html>

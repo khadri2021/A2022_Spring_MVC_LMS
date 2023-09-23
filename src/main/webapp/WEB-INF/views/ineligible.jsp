@@ -12,10 +12,11 @@
 <meta charset="ISO-8859-1">
 <title>Ineligible</title>
 </head>
-<body bgcolor="#ff3333">
+<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
+		<h1>WELCOME TO SBI LOAN MANAGEMENT SYSTEM</h1>
 		<h1>
-			You Are Ineligible For Applying Loan <br> <br> <a
+			You Are Ineligible For Applying Loan<br> <br> <a
 				href="search">Click Here To Go Previous Page</a>
 		</h1>
 	</div>

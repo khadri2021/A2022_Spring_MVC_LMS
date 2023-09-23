@@ -8,14 +8,17 @@
 <meta charset="ISO-8859-1">
 <title>Loan Apply Form</title>
 </head>
-<body bgcolor="#66ff66">
+<body bgcolor="#d1ebd6">
 	<div align="center">
+	<h1>SBI BANK LOAN APPLICATION</h1>
+	<hr>
+	<h2><u>LOAN APPLY FORM</u></h2>
 		<form action="apply" method="post">
 			<%
 			CustomerForm searchRecord = (CustomerForm) request.getAttribute("search_result");
 			%>
 
-			<table>
+			<table border="2">
 				<tr>
 					<td width="400">FIRST_NAME</td>
 					<td width="400"><input type="text"
@@ -127,8 +130,9 @@
 					<td colspan="2" align="center"><input type="submit"
 						value="Apply For Loan" /></td>
 				</tr>
-				<td colspan="2"><a href="search">Click Here</a> To Go Search Page</td>
-				<tr></tr>
+				<tr>
+					<td colspan="2" align="center"><a href="search">Click Here</a> To Go Search Page</td>
+				</tr>
 			</table>
 		</form>
 	</div>
