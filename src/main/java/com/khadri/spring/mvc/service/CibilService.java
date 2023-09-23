@@ -5,9 +5,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.khadri.spring.mvc.DAO.CibilDAO;
-import com.khadri.spring.mvc.DTO.CibilDTO;
-import com.khadri.spring.mvc.Entity.CibilEntity;
+import com.khadri.spring.mvc.dao.CibilDAO;
+import com.khadri.spring.mvc.dto.CibilDTO;
+import com.khadri.spring.mvc.entity.CibilEntity;
 
 @Service
 

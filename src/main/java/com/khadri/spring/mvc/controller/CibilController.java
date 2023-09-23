@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.khadri.spring.mvc.DTO.CibilDTO;
-import com.khadri.spring.mvc.Form.CibilForm;
+import com.khadri.spring.mvc.dto.CibilDTO;
+import com.khadri.spring.mvc.form.CibilForm;
 import com.khadri.spring.mvc.service.CibilService;
 
 @Controller

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
@@ -27,6 +28,11 @@ public class AppConfig {
 	public DbProperties dbProperties() {
 		return new DbProperties();
 	}
+	@Bean 
+	public ModelAndView modelAndView() {
+		return new ModelAndView();
+	}
+	
 
 	@Bean
 	public JdbcTemplate jdbcTemplate(DbProperties dbProperties) {
