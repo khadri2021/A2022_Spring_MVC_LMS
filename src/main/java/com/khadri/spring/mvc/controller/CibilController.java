@@ -16,7 +16,7 @@ import com.khadri.spring.mvc.service.CibilService;
 public class CibilController {
 
 	@Autowired
-	private CibilService cs;
+	private CibilService cibilService;
 
 	@RequestMapping("/home")
 	public String cibilHome() {
@@ -32,7 +32,7 @@ public class CibilController {
 			dto.setpNum(form.getpNum());
 			return dto;
 		}).findFirst().get();
-		String result = cs.checkCibil(cibilDTO);
+		String result = cibilService.checkCibil(cibilDTO);
 		if (result.equalsIgnoreCase("ELIGIBLE")) {
 			return "CONGRATULATIONS YOUR ELIGIBLE FOR LOAN";
 
