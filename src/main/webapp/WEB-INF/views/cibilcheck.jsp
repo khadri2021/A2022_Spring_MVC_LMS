@@ -1,5 +1,10 @@
 <html>
-<body bgcolor="#b3ecff" >
+<body bgcolor="#d1ebd6">
+<center>
+	<h1>SBI BANK LOAN APPLICATION</h1>
+</center>
+	<hr>
+
 <center>
 	<form action="check" method="post">
 		<table border="4">

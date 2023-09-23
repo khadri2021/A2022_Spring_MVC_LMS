@@ -1,4 +1,4 @@
-package com.khadri.spring.mvc.dao;
+package com.khadri.spring.mvc.cibil.dao;
 
 import java.util.Optional;
 
@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.khadri.spring.mvc.entity.CibilEntity;
+import com.khadri.spring.mvc.cibil.entity.CibilEntity;
 
 @Repository
 public class CibilDAO {
@@ -25,12 +25,12 @@ public class CibilDAO {
 		if (cibilScore > 60) {
 			String sql1 = "update account_data set LOAN_ELIGIBLE ='Eligible' where ADHAAR_NUMBER = ?";
 			jdbcTemplate.update(sql1, ce.getaNum());
-			return "ELIGIBLE";
+			return "YES";
 
 		} else {
 			String sql1 = "update account_data set LOAN_ELIGIBLE ='INEligible' where ADHAAR_NUMBER = ?";
 			jdbcTemplate.update(sql1, ce.getaNum());
-			return "INELIGIBLE";
+			return "NO";
 
 		}
 
