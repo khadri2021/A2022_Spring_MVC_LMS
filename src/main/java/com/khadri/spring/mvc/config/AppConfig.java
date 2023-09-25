@@ -10,6 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import com.khadri.spring.mvc.loan.utility.LoanAccount;
+
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = { "com.khadri.spring.mvc" })
@@ -18,21 +20,18 @@ public class AppConfig {
 
 	@Bean
 	public InternalResourceViewResolver internalResourceViewResolver() {
-		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/views/");
-		resolver.setSuffix(".jsp");
-		return resolver;
+		return new InternalResourceViewResolver("/WEB-INF/views/", ".jsp");
+	}
+
+	@Bean
+	public ModelAndView modelAndView() {
+		return new ModelAndView();
 	}
 
 	@Bean
 	public DbProperties dbProperties() {
 		return new DbProperties();
 	}
-	@Bean 
-	public ModelAndView modelAndView() {
-		return new ModelAndView();
-	}
-	
 
 	@Bean
 	public JdbcTemplate jdbcTemplate(DbProperties dbProperties) {
@@ -48,4 +47,8 @@ public class AppConfig {
 		return jdbcTemplate;
 	}
 
+	@Bean
+	public LoanAccount loanAccount() {
+		return new LoanAccount();
+	}
 }
