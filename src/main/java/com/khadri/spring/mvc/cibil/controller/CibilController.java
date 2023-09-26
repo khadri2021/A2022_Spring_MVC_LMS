@@ -34,6 +34,7 @@ public class CibilController {
 		}).findFirst().get();
 		String result = cs.checkCibil(cibilDTO);
 		if (result.equalsIgnoreCase("YES")) {
+
 			return "CONGRATULATIONS YOUR ELIGIBLE FOR LOAN";
 
 		}
