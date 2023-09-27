@@ -15,8 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.khadri.spring.mvc.account.dto.AccountDTO;
+import com.khadri.spring.mvc.account.entity.Account;
 import com.khadri.spring.mvc.account.form.AccountForm;
 import com.khadri.spring.mvc.account.service.AccountService;
+import com.khadri.spring.mvc.account.utility.AccountNumber;
 
 @Controller
 @RequestMapping("form")
@@ -64,6 +66,7 @@ public class AccountController {
 			dto.setNomineeName(form.getnName());
 			dto.setNomineeAdhaarNo(form.getAno());
 			dto.setNomineeAcNo(form.getAno());
+			dto.setAccountNumber(AccountNumber.generateAccountNumber());
 			dto.setCibil(form.getCibil());
 			return dto;
 		};
@@ -184,6 +187,17 @@ public class AccountController {
 		accountService.deleteAccount(pan);
 
 		return "deleted record!!!";
+	}
+	@GetMapping("/view/register")
+	@ResponseBody
+	public ModelAndView viewCustomerForm(@RequestParam("pan") String pan) {
+		modelAndView.addObject("view_result", accountService.viewAccount(pan));
+		modelAndView.setViewName("view_customer");
+
+		return modelAndView;
+
+		
+		
 	}
 
 }
