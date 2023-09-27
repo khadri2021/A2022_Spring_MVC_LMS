@@ -1,4 +1,4 @@
-<%@ page import="com.khadri.spring.mvc.account.form.AccountForm"%>
+<%@page import="com.khadri.spring.mvc.account.entity.Account"%>
 <%@ page import="java.util.Objects"%>
 
 <html>
@@ -22,9 +22,9 @@
 				<td colspan="16" align="center"><input type="submit"
 					value="Search Record"></td>
 			</tr>
-			<input type="hidden" name="mode" value="SEARCH">
+<!-- 			<input type="hidden" name="mode" value="SEARCH"> -->
 			<%
-			AccountForm searchRecord = (AccountForm) request.getAttribute("search_result");
+			Account searchRecord = (Account) request.getAttribute("view_result");
 			%>
 
 			<%
@@ -47,25 +47,27 @@
 				<td align="center">Nominee name</td>
 				<td align="center">Nominee adhaarno</td>
 				<td align="center">Nominee Accountno</td>
+				<td align="center">Accountno</td>
 				<td align="center">CIBIL</td>
 			</tr>
 
 			<tr>
-				<td align="center"><%=searchRecord.getfName()%></td>
-				<td align="center"><%=searchRecord.getlName()%></td>
+				<td align="center"><%=searchRecord.getFirstName()%></td>
+				<td align="center"><%=searchRecord.getLastName()%></td>
 				<td align="center"><%=searchRecord.getName()%></td>
-				<td align="center"><%=searchRecord.getsAge()%></td>
+				<td align="center"><%=searchRecord.getAge()%></td>
 				<td align="center"><%=searchRecord.getEmail()%></td>
-				<td align="center"><%=searchRecord.getPhone()%></td>
-				<td align="center"><%=searchRecord.getAlterPhone()%></td>
-				<td align="center"><%=searchRecord.getType()%></td>
-				<td align="center"><%=searchRecord.getcAddress()%></td>
-				<td align="center"><%=searchRecord.getpAddress()%></td>
-				<td align="center"><%=searchRecord.getAdhaar()%></td>
-				<td align="center"><%=searchRecord.getPan()%></td>
-				<td align="center"><%=searchRecord.getAno()%></td>
-				<td align="center"><%=searchRecord.getAco()%></td>
-				<td align="center"><%=searchRecord.getCibil()%></td>
+				<td align="center"><%=searchRecord.getPhoneNo()%></td>
+				<td align="center"><%=searchRecord.getAlternativePhoneNo()%></td>
+				<td align="center"><%=searchRecord.getAccountType()%></td>
+				<td align="center"><%=searchRecord.getCurrentAddress()%></td>
+				<td align="center"><%=searchRecord.getPermanentAddress()%></td>
+				<td align="center"><%=searchRecord.getAdhaarNo()%></td>
+				<td align="center"><%=searchRecord.getPanNo()%></td>
+				<td align="center"><%=searchRecord.getNomineeAdhaarNo()%></td>
+				<td align="center"><%=searchRecord.getNomineeAcNo()%></td>
+				<td align="center"><%=searchRecord.getAccountNumber()%></td>
+				<td align="center"><%=searchRecord.getCibilScore()%></td>
 			</tr>
 
 			<%
@@ -87,6 +89,7 @@
 				<td align="center">Nominee name</td>
 				<td align="center">Nominee adhaarno</td>
 				<td align="center">Nominee Accountno</td>
+				<td align="center">Accountno</td>
 				<td align="center">CIBIL</td>
 			</tr>
 

@@ -1,8 +1,17 @@
-package com.khadri.spring.mvc.dto;
+package com.khadri.spring.mvc.cibil.entity;
 
-public class CibilDTO {
+public class CibilEntity {
 	private String aNum;
 	private String pNum;
+	private String cibilScore;
+
+	public String getCibilScore() {
+		return cibilScore;
+	}
+
+	public void setCibilScore(String cibilScore) {
+		this.cibilScore = cibilScore;
+	}
 
 	public String getaNum() {
 		return aNum;

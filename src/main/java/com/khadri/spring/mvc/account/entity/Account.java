@@ -18,6 +18,16 @@ public class Account {
 	private String nomineeAdhaarNo;
 	private String nomineeAcNo;
 	private String cibilScore;
+	private String accountNumber;
+	
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 
 	public String getFirstName() {
 		return firstName;

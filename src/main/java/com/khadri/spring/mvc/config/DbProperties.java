@@ -46,5 +46,4 @@ public class DbProperties {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 }
