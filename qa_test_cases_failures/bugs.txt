@@ -1,0 +1,33 @@
+ACCOUNT
+scripts should added in sql_queries
+Introduce every page GoTo home button 
+modify -> introduce no records found
+view -> fix cosmotic changes
+delete -> introduce no records found
+delete ->fix cosmotic changes
+add/modify/view/delete -> maintain header   ACCOUNT CREATION PROCESS and color same
+
+validations
+add - manadatory validations : firstname,father/guardian,DOB,Phone number,Account type,current address/permanent address,adhaar no,pan no, nominee name,nominee adhaar no,cibil score.
+add - If we choose same as current address for permanent checkbox then disable permanent address when submit send the same data for both current and permanent address.
+view -> fix the  table row content
+delete -> fix the table row content
+
+
+CIBIL
+Introduce goback button
+change header SBI BANK LOAN APPLICATION to SBI BANK APPLICATION
+maintain header CIBIL CHECK PROCESS and color same
+validations
+mandatory->AADHAR and PAN
+
+LOAN 
+change header WELCOME TO SBI LOAN MANAGEMENT SYSTEM to LOAN ACCOUNT PROCESS
+disable fields which are not required
+mandatory validation for WHICH TYPE OF LOAN (change to TYPE OF LOAN)
+HOW MUCH LOAN to REQUESTED LOAN AMOUNT
+ACCOUNT NUMBER back end validation
+
+
+
+
