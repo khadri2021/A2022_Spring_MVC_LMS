@@ -19,8 +19,8 @@ mark {
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-	<h1>SBI BANK LOAN APPLICATION</h1>
-	<hr>
+		<h1>LOAN ACCOUNT PROCESS</h1>
+		<hr>
 		<h1>
 			<mark> You Are Eligible For Applying Loan </mark>
 			<br> <br>
@@ -28,10 +28,9 @@ mark {
 			String accountNumber = (String) request.getAttribute("accountNumber");
 			%>
 			<a href="createform?accountNumber=<%=accountNumber%>">Click Here</a>
-			For Apply Loan <br> <br> 
-			</h1>
-			<a href="search">Click Here</a> To
-			Go Previous Page
+			For Apply Loan <br> <br>
+		</h1>
+		<a href="search">Click Here</a> To Go Previous Page
 	</div>
 </body>
 </html>
