@@ -21,97 +21,105 @@
 				<tr>
 					<td width="400">FIRST_NAME</td>
 					<td width="400"><input type="text"
-						value="<%=searchRecord.getFirstName()%>" name="firstName" /></td>
+						value="<%=searchRecord.getFirstName()%>" name="firstName"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>LAST_NAME</td>
 					<td><input type="text" value="<%=searchRecord.getLastName()%>"
-						name="lastName" /></td>
+						name="lastName" readonly="readonly" /></td>
 				<tr>
 					<td>FATHER_NAME</td>
 					<td><input type="text"
-						value="<%=searchRecord.getFatherName()%>" name="fatherName" /></td>
+						value="<%=searchRecord.getFatherName()%>" name="fatherName"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>AGE</td>
 					<td><input type="text" value="<%=searchRecord.getAge()%>"
-						name="age" /></td>
+						name="age" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>EMAIL</td>
 					<td><input type="text" value="<%=searchRecord.getEmail()%>"
-						name="email" /></td>
+						name="email" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>PHONE_NUMBER</td>
 					<td><input type="text"
-						value="<%=searchRecord.getPhoneNumber()%>" name="phoneNumber" /></td>
+						value="<%=searchRecord.getPhoneNumber()%>" name="phoneNumber"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>ALTERNATIVE_PHONE_NUMBER</td>
 					<td><input type="text"
 						value="<%=searchRecord.getAlternativePhoneNumber()%>"
-						name="alternativePhoneNumber" /></td>
+						name="alternativePhoneNumber" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>ACCOUNT_TYPE</td>
 					<td><input type="text"
-						value="<%=searchRecord.getAccountType()%>" name="accountType" /></td>
+						value="<%=searchRecord.getAccountType()%>" name="accountType"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>CURRENT_ADDRESS</td>
 					<td><input type="text"
 						value="<%=searchRecord.getCurrentAddress()%>"
-						name="currentAddress" /></td>
+						name="currentAddress" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>PERMANENT_ADDRESS</td>
 					<td><input type="text"
 						value="<%=searchRecord.getPermanentAddress()%>"
-						name="permanentAddress" /></td>
+						name="permanentAddress" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>ADHAAR_NUMBER</td>
 					<td><input type="text"
-						value="<%=searchRecord.getAdhaarNumber()%>" name="adhaarNumber" /></td>
+						value="<%=searchRecord.getAdhaarNumber()%>" name="adhaarNumber"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>PAN_NUMBER</td>
 					<td><input type="text"
-						value="<%=searchRecord.getPanNumber()%>" name="panNumber" /></td>
+						value="<%=searchRecord.getPanNumber()%>" name="panNumber"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>NOMINEE_NAME</td>
 					<td><input type="text"
-						value="<%=searchRecord.getNomineeName()%>" name="nomineeName" /></td>
+						value="<%=searchRecord.getNomineeName()%>" name="nomineeName"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>NOMINEE_ADHAAR_NUMBER</td>
 					<td><input type="text"
 						value="<%=searchRecord.getNomineeAdhaarNumber()%>"
-						name="nomineeAdhaarNumber" /></td>
+						name="nomineeAdhaarNumber" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>NOMINEE_ACCOUNT_NUMBER</td>
 					<td><input type="text"
 						value="<%=searchRecord.getNomineeAccountNumber()%>"
-						name="nomineeAccountNumber" /></td>
+						name="nomineeAccountNumber" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>ACCOUNT_NUMBER</td>
 					<td><input type="text"
-						value="<%=searchRecord.getAccountNumber()%>" name="accountNumber" /></td>
+						value="<%=searchRecord.getAccountNumber()%>" name="accountNumber"
+						readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>GENERATED LOAN ACCOUNT NUMBER</td>
 					<td><input type="text"
 						value="<%=(String) request.getAttribute("loanAccountNumber")%>"
-						name="loanAccountNumber" /></td>
+						name="loanAccountNumber" readonly="readonly" /></td>
 				</tr>
 				<tr>
 					<td>WHICH TYPE OF LOAN</td>
 					<td><select name="lType">
-							<option>--Select Type Of Loan--</option>
+							<option value="">--Select Type Of Loan--</option>
 							<option value="Personal Loan">Personal Loan</option>
 							<option value="Home Loan">Home Loan</option>
 							<option value="Gold Loan">Gold Loan</option>
