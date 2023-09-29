@@ -87,7 +87,7 @@
 				<td>NOMINEE ACCOUNTNO :</td>
 				<td><input type="text" name="aco"></td>
 			</tr>
-			 
+		 	 
 			<tr>
 				<td>CIBIL SCORE :</td>
 				<td><input type="text" name="cibil"></td>

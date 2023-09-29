@@ -19,14 +19,14 @@ public class AccountDAO {
 	public void insertAccount(Account acc) {
 		System.out.println("Entered into AccountDAO : insertAccount(-)");
 
-		String sql = "insert into ACCOUNT_DATA(FIRST_NAME,LAST_NAME,FATHER_NAME,AGE,EMAIL,PHONE_NUMBER,ALTERNATIVE_PHONE_NUMBER,ACCOUNT_TYPE,CURRENT_ADDRESS,PERMANENT_ADDRESS,ADHAAR_NUMBER,PAN_NUMBER,NOMINEE_NAME,NOMINEE_ADHAAR_NUMBER,NOMINEE_ACCOUNT_NUMBER) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into ACCOUNT_DATA(FIRST_NAME,LAST_NAME,FATHER_NAME,AGE,EMAIL,PHONE_NUMBER,ALTERNATIVE_PHONE_NUMBER,ACCOUNT_TYPE,CURRENT_ADDRESS,PERMANENT_ADDRESS,ADHAAR_NUMBER,PAN_NUMBER,NOMINEE_NAME,NOMINEE_ADHAAR_NUMBER,NOMINEE_ACCOUNT_NUMBER,ACCOUNT_NUMBER) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		String sql1 = "insert into CIBIL_DATA values(?,?,?) ";
 
 		int result = jdbcTemplate.update(sql, acc.getFirstName(), acc.getLastName(), acc.getName(), acc.getAge(),
 				acc.getEmail(), acc.getPhoneNo(), acc.getAlternativePhoneNo(), acc.getAccountType(),
 				acc.getCurrentAddress(), acc.getPermanentAddress(), acc.getAdhaarNo(), acc.getPanNo(),
-				acc.getNomineeName(), acc.getNomineeAdhaarNo(), acc.getNomineeAcNo());
+				acc.getNomineeName(), acc.getNomineeAdhaarNo(), acc.getNomineeAcNo(),acc.getAccountNumber());
 
 		int result1 = jdbcTemplate.update(sql1, acc.getAdhaarNo(), acc.getPanNo(), acc.getCibilScore());
 
@@ -101,6 +101,16 @@ public class AccountDAO {
 		String sql = "delete from ACCOUNT_DATA where PAN_NUMBER=" + panNo;
 		int result = jdbcTemplate.update(sql);
 		System.out.println(result + " Record deleted ");
+	}
+	public Account viewAccount(String panNo) {
+		System.out.println("Entered into AccountDAO : viewAccount(-)");
+		
+		String sql = "select * from ACCOUNT_DATA where PAN_NUMBER='" + panNo + "'";
+		RowMapper<Account> rowMapper = rowMapperForAccount();
+		Account acc = jdbcTemplate.queryForObject(sql, rowMapper);
+
+		return acc;
+
 	}
 
 }

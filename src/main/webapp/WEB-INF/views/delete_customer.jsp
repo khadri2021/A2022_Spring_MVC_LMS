@@ -6,7 +6,7 @@
 <script type="text/javascript">
 
 function ajaxDeleteForm(rowCount){
-	//alert('ajax Invoking '+rowCount);
+	alert('ajax Invoking '+rowCount);
 	var panNo= document.getElementById('panNo'+rowCount).value; 
 	
 	var xhttp = new XMLHttpRequest();
@@ -55,6 +55,7 @@ function ajaxDeleteForm(rowCount){
 				<td align="center">Nominee name</td>
 				<td align="center">Nominee adhaarno</td>
 				<td align="center">Nominee Accountno</td>
+				<td align="center">Accountno</td>
 				<td align="center">CIBIL</td>
 			</tr>
 			<%
@@ -96,7 +97,7 @@ function ajaxDeleteForm(rowCount){
 				<td><input type="text" id="adhaar<%=inc%>"
 					value="<%=customer.getAdhaar()%>"></td>
 
-				<td><input type="text" id="pan<%=inc%>"
+				<td><input type="text" id="panNo<%=inc%>"
 					value="<%=customer.getPan()%>"></td>
 
 				<td><input type="text" id="nName<%=inc%>"
@@ -105,9 +106,13 @@ function ajaxDeleteForm(rowCount){
 				<td><input type="text" id="ano<%=inc%>"
 					value="<%=customer.getAno()%>"></td>
 
+
 				<td><input type="text" id="aco<%=inc%>"
 					value="<%=customer.getAco()%>"></td>
-
+					
+				<td><input type="text" id="acno<%=inc%>"
+					value="<%=customer.getAcno()%>"></td>
+					
 				<td><input type="button" value="DELETE RECORD"
 					onclick="ajaxDeleteForm(<%=inc%>)"></td>
 			</tr>

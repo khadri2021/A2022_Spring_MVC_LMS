@@ -37,6 +37,7 @@ public class AccountService {
 			acc.setNomineeName(dto.getNomineeName());
 			acc.setNomineeAdhaarNo(dto.getNomineeAdhaarNo());
 			acc.setNomineeAcNo(dto.getNomineeAcNo());
+			acc.setAccountNumber(dto.getAccountNumber());
 			acc.setCibilScore(dto.getCibil());
 			return acc;
 		};
@@ -142,6 +143,11 @@ public class AccountService {
 
 		accDao.deleteAccount(pan);
 
+	}
+	public Account viewAccount(String pan) {
+		
+	return	accDao.viewAccount(pan);
+		
 	}
 
 }

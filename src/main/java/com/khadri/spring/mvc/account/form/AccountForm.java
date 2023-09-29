@@ -22,9 +22,16 @@ public class AccountForm {
 	private String ano;
 	private String aco;
 	private String cibil;
+	private String acno;
 	
 	
 	
+	public String getAcno() {
+		return acno;
+	}
+	public void setAcno(String acno) {
+		this.acno = acno;
+	}
 	public String getCibil() {
 		return cibil;
 	}

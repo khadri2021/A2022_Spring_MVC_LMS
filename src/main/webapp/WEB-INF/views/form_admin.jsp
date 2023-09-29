@@ -3,7 +3,7 @@
 <center>
 	<h1>SBI BANK LOAN APPLICATION</h1>
 </center>
-	<hr>
+	<hr> 
 	<table border="4">
 		<tr>
 			<td colspan="2" align="center" height="50"> <a href="addpage">Add Account</a></td>
