@@ -44,7 +44,7 @@ public class CustomerService {
 		}).findFirst().get();
 	}
 
-	public void applyForLoan(CustomerDTO customerDTO) {
+	public String applyForLoan(CustomerDTO customerDTO) {
 		Customer cust = Optional.ofNullable(customerDTO).stream().map((dto) -> {
 			Customer customer = new Customer();
 			customer.setFirstName(dto.getFirstName());
@@ -70,7 +70,7 @@ public class CustomerService {
 			customer.setHowMuchLoanRequired(dto.getHowMuchLoanRequired());
 			return customer;
 		}).findFirst().get();
-		customerDAO.applyForLoan(cust);
+		return customerDAO.applyForLoan(cust);
 	}
 
 }
