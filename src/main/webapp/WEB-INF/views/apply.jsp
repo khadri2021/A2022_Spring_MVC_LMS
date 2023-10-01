@@ -7,12 +7,30 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Loan Apply Form</title>
+<script type="text/javascript">
+	function validation() {
+		var loanType = document.getElementById("lType").value;
+		var assets = document.getElementById("assets").value;
+		var loanAmount = document.getElementById("loanAmount").value;
+		if (loanType == "") {
+			alert("Please select type of the loan...!");
+			return false;
+		} else if (assets == "") {
+			alert("Please enter assets name...!");
+			return false;
+		} else if (loanAmount == "") {
+			alert("Please enter required loan amount...!");
+			return false;
+		}
+		return true;
+	}
+</script>
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
 		<h1>LOAN ACCOUNT PROCESS</h1>
 		<hr>
-		<form action="apply" method="post">
+		<form action="apply" method="post" onsubmit="return validation();">
 			<%
 			CustomerForm searchRecord = (CustomerForm) request.getAttribute("search_result");
 			%>
@@ -117,9 +135,9 @@
 						name="loanAccountNumber" readonly="readonly" /></td>
 				</tr>
 				<tr>
-					<td>WHICH TYPE OF LOAN</td>
-					<td><select name="lType">
-							<option value="">--Select Type Of Loan--</option>
+					<td>TYPE OF LOAN</td>
+					<td><select name="lType" id="lType">
+							<option value="">--Select Loan Type--</option>
 							<option value="Personal Loan">Personal Loan</option>
 							<option value="Home Loan">Home Loan</option>
 							<option value="Gold Loan">Gold Loan</option>
@@ -127,11 +145,12 @@
 				</tr>
 				<tr>
 					<td>ASSETS</td>
-					<td><input type="text" name="assets"></td>
+					<td><input type="text" name="assets" id="assets"></td>
 				</tr>
 				<tr>
-					<td>HOW MUCH LOAN</td>
-					<td><input type="text" name="howMuchLoanRequired"></td>
+					<td>REQUESTED LOAN AMOUNT</td>
+					<td><input type="text" name="howMuchLoanRequired"
+						id="loanAmount"></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"

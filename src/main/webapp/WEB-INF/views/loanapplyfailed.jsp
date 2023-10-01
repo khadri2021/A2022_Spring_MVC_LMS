@@ -10,16 +10,14 @@
 }
 </style>
 <meta charset="ISO-8859-1">
-<title>Home Page</title>
+<title>Eligible</title>
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
 		<h1>LOAN ACCOUNT PROCESS</h1>
 		<hr>
-		<h3>
-			<a href="customer/search">Click Here</a> To Search For Existing
-			Account Details For Create A Loan Account
-		</h3>
-		<a href="index.jsp">Click Here</a> To Go Home Page
+		<h1>You Are Already Applied For Loan</h1>
+		<a href="../index.jsp">Click Here</a> To Go Home Page
 	</div>
+</body>
 </html>
