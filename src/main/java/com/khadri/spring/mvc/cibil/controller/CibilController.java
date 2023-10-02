@@ -2,8 +2,12 @@ package com.khadri.spring.mvc.cibil.controller;
 
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,13 +23,17 @@ public class CibilController {
 	private CibilService cs;
 
 	@RequestMapping("/home")
-	public String cibilHome() {
+	public String cibilHome(@ModelAttribute("cf") CibilForm cf) {
 		return "cibilcheck";
 	}
 
 	@RequestMapping("/check")
-	@ResponseBody
-	public String checkCibil(CibilForm cf) {
+	public String checkCibil(@Valid @ModelAttribute("cf") CibilForm cf, BindingResult br) {
+		if (br.hasErrors()) {
+			return "cibilcheck";
+
+		}
+
 		CibilDTO cibilDTO = Optional.ofNullable(cf).stream().map((form) -> {
 			CibilDTO dto = new CibilDTO();
 			dto.setaNum(form.getaNum());
@@ -33,13 +41,14 @@ public class CibilController {
 			return dto;
 		}).findFirst().get();
 		String result = cs.checkCibil(cibilDTO);
+
 		if (result.equalsIgnoreCase("YES")) {
 
-			return "CONGRATULATIONS YOUR ELIGIBLE FOR LOAN";
+			return "cibilsuccess";
 
 		}
 
-		return "SORRY YOUR NOT ELIGIBLE FOR LOAN";
+		return "cibilfail";
 
 	}
 

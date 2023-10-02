@@ -100,7 +100,7 @@
 		</table>
 		<table bgcolor="#99ff99">
 			<tr>
-				<td colspan="2" align="center"><a href="student_admin.jsp">Go
+				<td colspan="2" align="center"><a href="form_admin.jsp">Go
 						To</a> previous page</td>
 			</tr>
 			

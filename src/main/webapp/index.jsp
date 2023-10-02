@@ -1,7 +1,7 @@
 <html>
 <body bgcolor="#d1ebd6">
 <center>
-	<h1>SBI BANK LOAN APPLICATION</h1>
+	<h1>SBI BANK APPLICATION</h1>
 </center>
 	<hr>
 	<table border="2" >
