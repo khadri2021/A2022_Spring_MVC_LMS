@@ -7,11 +7,11 @@
 	<form action="add/register" method="post">
 		<table border="4">
 			<tr>
-				<td colspan="2" align="center">ADD BANK APPLICATION FORM</td>
+				<td colspan="2" align="center">ADD BANK  ACCOUNT FORM</td>
 			</tr>
 			<tr>
 				<td>FIRST NAME :</td>
-				<td><input type="text" name="fName"></td>
+				<td><input type="text" name="fName" required="required"></td>
 			</tr>
 			</tr>
 			<tr>
@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<td>FATHER/GUARDIAN NAME :</td>
-				<td><input type="text" name="Name"></td>
+				<td><input type="text" name="Name" required="required"></td>
 			</tr>
 			<tr>
 				<td>DOB :</td>
@@ -34,7 +34,7 @@
 			</tr>
 			<tr>
 				<td>PHONE NUMBER:</td>
-				<td><input type="text" name="phone"></td>
+				<td><input type="text" name="phone" required="required"></td>
 			</tr>
 			</tr>
 			<tr>
@@ -57,7 +57,7 @@
 			</tr>
 			<tr>
 				<td>PERMANENT ADDRESS :</td>
-				<td><textarea rows="6" cols="30" name="pAddress">
+				<td><textarea rows="6" cols="30" name="pAddress" required="required">
 				
 				</textarea></td>
 			</tr>
@@ -65,22 +65,22 @@
 			</tr>
 			<tr>
 				<td>ADHAAR NO:</td>
-				<td><input type="text" name="adhaar"></td>
+				<td><input type="text" name="adhaar" required="required"></td>
 			</tr>
 			 
 			<tr>
 				<td>PAN NO:</td>
-				<td><input type="text" name="pan"></td>
+				<td><input type="text" name="pan" required="required"></td>
 			</tr>
 			</tr>
 			<tr>
 				<td>NOMINEE NAME :</td>
-				<td><input type="text" name="nName"></td>
+				<td><input type="text" name="nName" required="required"></td>
 			</tr>
 			 
 			<tr>
 				<td>NOMINEE ADHAARNO :</td>
-				<td><input type="text" name="ano"></td>
+				<td><input type="text" name="ano" required="required"></td>
 			</tr>
 			 
 			<tr>
@@ -98,13 +98,11 @@
 			</tr>
 
 		</table>
-		<table bgcolor="#99ff99">
+		 		<table bgcolor="#99ff99">
 			<tr>
-				<td colspan="2" align="center"><a href="student_admin.jsp">Go
+				<td colspan="2" align="center"><a href="../../adminpage">Go
 						To</a> previous page</td>
 			</tr>
-			
-			
 		</table>
 		
 		

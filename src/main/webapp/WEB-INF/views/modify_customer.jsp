@@ -56,21 +56,21 @@
 
 
 			<tr>
-				<td align="center">First Name</td>
-				<td align="center">Last NAME</td>
+				<td align="center">FIRST NAME</td>
+				<td align="center">LAST NAME</td>
 				<td align="center">NAME</td>
 				<td align="center">AGE</td>
-				<td align="center">Email</td>
+				<td align="center">EMAIL</td>
 				<td align="center">PHONE NUMBER</td>
 				<td align="center">ALTERNATIVE PHONE NUMBER</td>
-				<td align="center">Type</td>
-				<td align="center">Current ADDRESS</td>
-				<td align="center">Peramanent ADDRESS</td>
-				<td align="center">Adhaar</td>
-				<td align="center">Pan</td>
-				<td align="center">Nominee name</td>
-				<td align="center">Nominee adhaarno</td>
-				<td align="center">Nominee Accountno</td>
+				<td align="center">TYPE</td>
+				<td align="center">CURRENT ADDRESS</td>
+				<td align="center">PERAMANENT ADDRESS</td>
+				<td align="center">ADHAAR NO</td>
+				<td align="center">PAN NO</td>
+				<td align="center">NOMINEE NAME</td>
+				<td align="center">NOMINEE ADHAARNO</td>
+				<td align="center">NOMINEE ACCOUNTNO</td>
 				<td align="center">CIBIL</td>
 			</tr>
 			<%
@@ -146,6 +146,12 @@
 			<input type="hidden" name="mode" value="EDIT">
 
 
+		</table>
+		<table bgcolor="#99ff99">
+			<tr>
+				<td colspan="2" align="center"><a href="../../adminpage">Go
+						To</a> previous page</td>
+			</tr>
 		</table>
 
 

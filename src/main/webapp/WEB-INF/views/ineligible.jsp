@@ -5,8 +5,8 @@
 <head>
 <style type="text/css">
 .center {
-	padding: 70px 0;
-	text-align: center;
+  padding: 70px 0;
+  text-align: center;
 }
 </style>
 <meta charset="ISO-8859-1">
@@ -14,8 +14,7 @@
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>LOAN ACCOUNT PROCESS</h1>
-		<hr>
+		<h1>WELCOME TO SBI LOAN MANAGEMENT SYSTEM</h1>
 		<h1>
 			You Are Ineligible For Applying Loan<br> <br> <a
 				href="search">Click Here To Go Previous Page</a>
