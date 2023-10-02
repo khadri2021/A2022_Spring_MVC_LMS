@@ -9,9 +9,10 @@
 <title>Loan Apply Form</title>
 </head>
 <body bgcolor="#d1ebd6">
-	<div align="center" class="center">
-		<h1>LOAN ACCOUNT PROCESS</h1>
-		<hr>
+	<div align="center">
+	<h1>SBI BANK LOAN APPLICATION</h1>
+	<hr>
+	<h2><u>LOAN APPLY FORM</u></h2>
 		<form action="apply" method="post">
 			<%
 			CustomerForm searchRecord = (CustomerForm) request.getAttribute("search_result");
@@ -130,8 +131,7 @@
 						value="Apply For Loan" /></td>
 				</tr>
 				<tr>
-					<td colspan="2" align="center"><a href="search">Click Here</a>
-						To Go Search Page</td>
+					<td colspan="2" align="center"><a href="search">Click Here</a> To Go Search Page</td>
 				</tr>
 			</table>
 		</form>

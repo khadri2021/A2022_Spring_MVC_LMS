@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.khadri.spring.mvc.account.dto.AccountDTO;
-import com.khadri.spring.mvc.account.entity.Account;
 import com.khadri.spring.mvc.account.form.AccountForm;
 import com.khadri.spring.mvc.account.service.AccountService;
 import com.khadri.spring.mvc.account.utility.AccountNumber;

@@ -1,5 +1,7 @@
 package com.khadri.spring.mvc.loan.form;
 
+import javax.validation.constraints.NotNull;
+
 public class CustomerForm {
 
 	private String firstName;
@@ -18,10 +20,14 @@ public class CustomerForm {
 	private String nomineeAdhaarNumber;
 	private String nomineeAccountNumber;
 	private String loanEligible;
+	@NotNull(message = "Account number is empty")
 	private String accountNumber;
 	private String loanAccountNumber;
+	@NotNull
 	private String lType;
+	@NotNull
 	private String assets;
+	@NotNull
 	private String howMuchLoanRequired;
 
 	public String getFirstName() {

@@ -14,11 +14,10 @@
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>LOAN ACCOUNT PROCESS</h1>
-		<hr>
 		<h1>
-			INVALID ACCOUNT NUMBER <br> </h1><a href="search">Click Here</a> To
+			INVALID ACCOUNT NUMBER <br> <a href="search">Click Here</a> To
 			Go Search Page
+		</h1>
 	</div>
 </body>
 </html>

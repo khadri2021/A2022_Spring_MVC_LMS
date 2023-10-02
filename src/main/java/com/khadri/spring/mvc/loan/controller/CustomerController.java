@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.khadri.spring.mvc.loan.dto.CustomerDTO;
@@ -40,6 +39,10 @@ public class CustomerController {
 
 	@PostMapping("customer/checkeligibility")
 	public ModelAndView checkEligibility(@RequestParam String accountNumber) {
+		if (accountNumber.equalsIgnoreCase("")) {
+			modelAndView.setViewName("search");
+			return modelAndView;
+		}
 		String eligibility = customerService.checkEligibility(accountNumber);
 		if (eligibility.equalsIgnoreCase("ELIGIBLE")) {
 			modelAndView.addObject("accountNumber", accountNumber);
@@ -86,9 +89,12 @@ public class CustomerController {
 	}
 
 	@PostMapping("customer/apply")
-	@ResponseBody
 	public String applyForLoan(CustomerForm customerForm) {
-		customerService.applyForLoan(Optional.ofNullable(customerForm).stream().map((form) -> {
+		if (customerForm.getlType().equalsIgnoreCase("") || customerForm.getAssets().equalsIgnoreCase("")
+				|| customerForm.getHowMuchLoanRequired().equalsIgnoreCase("")) {
+			return "redirect:createform?accountNumber="+customerForm.getAccountNumber();
+		}
+		String applyForLoan = customerService.applyForLoan(Optional.ofNullable(customerForm).stream().map((form) -> {
 			CustomerDTO dto = new CustomerDTO();
 			dto.setFirstName(form.getFirstName());
 			dto.setLastName(form.getLastName());
@@ -113,6 +119,9 @@ public class CustomerController {
 			dto.setHowMuchLoanRequired(form.getHowMuchLoanRequired());
 			return dto;
 		}).findFirst().get());
-		return "Successfully Applied For " + customerForm.getlType();
+		if (applyForLoan.equalsIgnoreCase("Success")) {
+			return "loanapplysuccess";
+		}
+		return "loanapplyfailed";
 	}
 }
