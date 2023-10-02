@@ -100,6 +100,7 @@
 		</table>
 		 		<table bgcolor="#99ff99">
 			<tr>
+
 				<td colspan="2" align="center"><a href="../../adminpage">Go
 						To</a> previous page</td>
 			</tr>
