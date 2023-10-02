@@ -10,26 +10,16 @@
 }
 </style>
 <title>Search Page</title>
-<script type="text/javascript">
-	function validation() {
-		var accountNumber = document.getElementById("accountNumber").value;
-		if (accountNumber == "") {
-			alert("Please enter account number...!");
-			return false;
-		}
-		return true;
-	}
-</script>
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-	<h1>LOAN ACCOUNT PROCESS</h1>
+	<h1>SBI BANK LOAN APPLICATION</h1>
 	<hr>
-		<form action="checkeligibility" method="post" onsubmit="return validation();">
-			ACCOUNT NUMBER : <input type="text" name="accountNumber" id="accountNumber"><br>
+		<h1><u>SEARCH PAGE</u></h1>
+		<form action="checkeligibility" method="post">
+			ACCOUNT NUMBER : <input type="text" name="accountNumber"><br>
 			<br> <input type="submit" value="Search">
 		</form>
-		<a href="../index.jsp">Click Here</a> To Go Home Page
 	</div>
 </body>
 </html>
