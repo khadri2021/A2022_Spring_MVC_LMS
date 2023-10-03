@@ -37,7 +37,7 @@ mark {
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>LOAN ACCOUNT PROCESS</h1>
+		<h1>SBI BANK LOAN APPLICATION</h1>
 		<hr>
 		<h1>
 			<mark> You Are Eligible For Applying Loan </mark>

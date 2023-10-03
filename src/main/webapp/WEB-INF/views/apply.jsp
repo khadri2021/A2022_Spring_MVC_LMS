@@ -30,24 +30,6 @@
 </style>
 <meta charset="ISO-8859-1">
 <title>Loan Apply Form</title>
-<script type="text/javascript">
-	function validation() {
-		var loanType = document.getElementById("lType").value;
-		var assets = document.getElementById("assets").value;
-		var loanAmount = document.getElementById("loanAmount").value;
-		if (loanType == "") {
-			alert("Please select type of the loan...!");
-			return false;
-		} else if (assets == "") {
-			alert("Please enter assets name...!");
-			return false;
-		} else if (loanAmount == "") {
-			alert("Please enter required loan amount...!");
-			return false;
-		}
-		return true;
-	}
-</script>
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
@@ -55,7 +37,6 @@
 		<hr>
 		<form:form action="process" method="post"
 			onsubmit="return validation()" modelAttribute="custForm">
-
 			<table border="1">
 				<tr>
 					<td width="400">FIRST_NAME</td>

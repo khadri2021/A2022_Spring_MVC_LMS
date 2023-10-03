@@ -34,16 +34,6 @@
 }
 </style>
 <title>Search Page</title>
-<script type="text/javascript">
-	function validation() {
-		var accountNumber = document.getElementById("accountNumber").value;
-		if (accountNumber == "") {
-			alert("Please enter account number...!");
-			return false;
-		}
-		return true;
-	}
-</script>
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
