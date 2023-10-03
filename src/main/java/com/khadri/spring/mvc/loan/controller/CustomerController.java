@@ -2,15 +2,19 @@ package com.khadri.spring.mvc.loan.controller;
 
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.khadri.spring.mvc.loan.dto.CustomerDTO;
+import com.khadri.spring.mvc.loan.form.AccountForm;
 import com.khadri.spring.mvc.loan.form.CustomerForm;
 import com.khadri.spring.mvc.loan.service.CustomerService;
 import com.khadri.spring.mvc.loan.utility.LoanAccount;
@@ -22,48 +26,35 @@ public class CustomerController {
 	private CustomerService customerService;
 
 	@Autowired
-	private ModelAndView modelAndView;
-
-	@Autowired
 	private LoanAccount loanAccount;
 
-	@RequestMapping("/loanhomepage")
-	public String homePage() {
-		return "loanhomepage";
-	}
-
-	@RequestMapping("customer/search")
-	public String searchPage() {
+	@RequestMapping("loan/search")
+	public String searchPage(@ModelAttribute("accForm") AccountForm accForm) {
 		return "search";
 	}
 
-	@PostMapping("customer/checkeligibility")
-	public ModelAndView checkEligibility(@RequestParam String accountNumber) {
-		if (accountNumber.equalsIgnoreCase("")) {
-			modelAndView.setViewName("search");
-			return modelAndView;
+	@PostMapping("loan/checkeligibility")
+	public String checkEligibility(@Valid @ModelAttribute("accForm") AccountForm accForm, BindingResult result,
+			Model model) {
+		if (result.hasErrors()) {
+			return "search";
 		}
-		String eligibility = customerService.checkEligibility(accountNumber);
-		if (eligibility.equalsIgnoreCase("ELIGIBLE")) {
-			modelAndView.addObject("accountNumber", accountNumber);
-			modelAndView.setViewName("eligible");
-			return modelAndView;
-		} else if (eligibility.equalsIgnoreCase("Invalid")) {
-			modelAndView.setViewName("invalid");
-			return modelAndView;
-		} else
-
-		{
-			modelAndView.setViewName("ineligible");
-			return modelAndView;
+		String eligibility = customerService.checkEligibility(accForm.getAccountNumber());
+		if (Optional.ofNullable(eligibility).isPresent()) {
+			if (eligibility.equalsIgnoreCase("Eligible")) {
+				model.addAttribute("accountNumber", accForm.getAccountNumber());
+				return "eligible";
+			} else if (eligibility.equalsIgnoreCase("InEligible")) {
+				return "ineligible";
+			}
 		}
+		return "invalid";
 	}
 
-	@GetMapping("customer/createform")
-	public ModelAndView createCustomerLoanApplicationForm(@RequestParam String accountNumber) {
-
-		modelAndView.addObject("search_result",
-				Optional.ofNullable(customerService.getCustomer(accountNumber)).stream().map((dto) -> {
+	@GetMapping("loan/createform")
+	public String createCustomerLoanApplicationForm(@ModelAttribute("custForm") CustomerForm custForm, Model model) {
+		model.addAttribute("custForm",
+				Optional.ofNullable(customerService.getCustomer(custForm.getAccountNumber())).stream().map((dto) -> {
 					CustomerForm form = new CustomerForm();
 					form.setFirstName(dto.getFirstName());
 					form.setLastName(dto.getLastName());
@@ -82,19 +73,18 @@ public class CustomerController {
 					form.setNomineeAccountNumber(dto.getNomineeAccountNumber());
 					form.setLoanEligible(dto.getLoanEligible());
 					form.setAccountNumber(dto.getAccountNumber());
+					form.setLoanAccountNumber(loanAccount.generateLoanAccountNumber());
 					return form;
-				}).findFirst().get()).setViewName("apply");
-		modelAndView.addObject("loanAccountNumber", loanAccount.generateLoanAccountNumber());
-		return modelAndView;
+				}).findFirst().get());
+		return "apply";
 	}
 
-	@PostMapping("customer/apply")
-	public String applyForLoan(CustomerForm customerForm) {
-		if (customerForm.getlType().equalsIgnoreCase("") || customerForm.getAssets().equalsIgnoreCase("")
-				|| customerForm.getHowMuchLoanRequired().equalsIgnoreCase("")) {
-			return "redirect:createform?accountNumber="+customerForm.getAccountNumber();
+	@PostMapping("loan/process")
+	public String afterApply(@Valid @ModelAttribute("custForm") CustomerForm custForm, BindingResult result) {
+		if (result.hasErrors()) {
+			return "apply";
 		}
-		String applyForLoan = customerService.applyForLoan(Optional.ofNullable(customerForm).stream().map((form) -> {
+		String applyForLoan = customerService.applyForLoan(Optional.ofNullable(custForm).stream().map((form) -> {
 			CustomerDTO dto = new CustomerDTO();
 			dto.setFirstName(form.getFirstName());
 			dto.setLastName(form.getLastName());

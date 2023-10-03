@@ -1,33 +1,41 @@
 package com.khadri.spring.mvc.loan.form;
 
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 
 public class CustomerForm {
 
+	@NotEmpty(message = "First Name is Empty")
 	private String firstName;
 	private String lastName;
 	private String fatherName;
+	@NotEmpty(message = "Age is Empty")
 	private String age;
 	private String email;
+	@NotEmpty(message = "Phone Number is Empty")
 	private String phoneNumber;
 	private String alternativePhoneNumber;
+	@NotEmpty(message = "Account Type is Empty")
 	private String accountType;
+	@NotEmpty(message = "Current Address is Empty")
 	private String currentAddress;
 	private String permanentAddress;
+	@NotEmpty(message = "Adhaar Number is Empty")
 	private String adhaarNumber;
+	@NotEmpty(message = "Pan Number is Empty")
 	private String panNumber;
 	private String nomineeName;
 	private String nomineeAdhaarNumber;
 	private String nomineeAccountNumber;
+	@NotEmpty(message = "Loan Eligible is Empty")
 	private String loanEligible;
-	@NotNull(message = "Account number is empty")
+	@NotEmpty(message = "Account Number is Empty")
 	private String accountNumber;
 	private String loanAccountNumber;
-	@NotNull
+	@NotEmpty(message = "Loan Type is Empty")
 	private String lType;
-	@NotNull
+	@NotEmpty(message = "Assets is Empty")
 	private String assets;
-	@NotNull
+	@NotEmpty(message = "Requested Loan Amount is Empty")
 	private String howMuchLoanRequired;
 
 	public String getFirstName() {

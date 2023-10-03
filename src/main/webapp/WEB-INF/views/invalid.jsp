@@ -5,8 +5,26 @@
 <head>
 <style type="text/css">
 .center {
-  padding: 70px 0;
-  text-align: center;
+	padding: 70px 0;
+	text-align: center;
+}
+
+#link {
+	width: 100px;
+	height: 20px;
+	background: #4285f4 !important;
+	padding: 1px;
+	text-align: center;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	line-height: 20px;
+	text-decoration: none;
+	height: 20px;
+}
+
+#link:active, #link:hover {
+	color: pink;
 }
 </style>
 <meta charset="ISO-8859-1">
@@ -17,8 +35,9 @@
 		<h1>LOAN ACCOUNT PROCESS</h1>
 		<hr>
 		<h1>
-			INVALID ACCOUNT NUMBER <br> </h1><a href="search">Click Here</a> To
-			Go Search Page
+			INVALID ACCOUNT DETAILS <br>
+		</h1>
+		<a href="search" id="link">Click Here</a> To Go Search Page
 	</div>
 </body>
 </html>
