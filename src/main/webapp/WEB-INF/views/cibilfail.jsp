@@ -4,7 +4,7 @@
 	<html>
 	<body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>CIBIL CHECKPROCESS</h1>
+		<h1>CIBIL CHECK PROCESS</h1>
 		<hr>
 		<h1>
 			SORRY YOUR NOT ELIGIBLE FOR LOAN<br> <br> 
