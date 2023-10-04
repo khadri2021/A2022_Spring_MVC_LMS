@@ -11,7 +11,7 @@
 	<a href="cibil/home">Cibil Check</a>
 	</td>
 	<td align="center"  width="1000" >
-	<a href="loanhomepage">Loan Account Process</a>
+	<a href="loan/search">Loan Account Process</a>
 	</td>
 	</tr>
 	</table>
