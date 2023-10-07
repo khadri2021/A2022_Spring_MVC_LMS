@@ -28,6 +28,11 @@ public class CustomerController {
 	@Autowired
 	private LoanAccount loanAccount;
 
+	@RequestMapping("loan/homepage")
+	public String loanHomePage() {
+		return "loanhomepage";
+	}
+
 	@RequestMapping("loan/search")
 	public String searchPage(@ModelAttribute("accForm") AccountForm accForm) {
 		return "search";

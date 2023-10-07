@@ -14,11 +14,11 @@
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
-		<h1>WELCOME TO SBI LOAN MANAGEMENT SYSTEM</h1>
+		<h1>WELCOME TO LOAN ACCOUNT PROCESS</h1>
 		<hr>
 		<h3>
-			<a href="customer/search">Click Here</a> To Search For Existing
-			Account Details For Create A Loan Account
+			<a href="search">Click Here</a> To Search For Existing Account
+			Details For Create A Loan Account
 		</h3>
 	</div>
 </html>

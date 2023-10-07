@@ -32,6 +32,8 @@
 </head>
 <body bgcolor="#d1ebd6">
 	<div align="center" class="center">
+		<h1>LOAN ACCOUNT PROCESS</h1>
+		<hr>
 		<h1>
 			INVALID ACCOUNT DETAILS <br>
 		</h1>
