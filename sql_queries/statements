@@ -20,8 +20,11 @@ CREATE TABLE `loan_data` (
   `LOAN_ACCOUNT_NUMBER` varchar(45) NOT NULL,
   `LOAN_TYPE` varchar(45) DEFAULT NULL,
   `ASSETS` varchar(45) DEFAULT NULL,
-  `HOW_MUCH_LOAN_REQUIRED` varchar(45) DEFAULT NULL,
-  `APPROVAL` varchar(45) DEFAULT NULL,
+  `LOAN_REQUESTED` varchar(45) DEFAULT NULL,
+  `LOAN_SANCTIONED` varchar(45) DEFAULT NULL,
+  `LOAN_APPROVAL` varchar(45) DEFAULT NULL,
+  `REASON_DESC` varchar(45) DEFAULT NULL,
+  `CUST_STATUS` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ADHAAR_NUMBER`,`PAN_NUMBER`,`NOMINEE_ADHAAR_NUMBER`,`NOMINEE_ACCOUNT_NUMBER`,`ACCOUNT_NUMBER`,`LOAN_ACCOUNT_NUMBER`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 ------------------------------------------------------------------------------------------------------------------------------------
