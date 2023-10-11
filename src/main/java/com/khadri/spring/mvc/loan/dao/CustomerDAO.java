@@ -76,7 +76,7 @@ public class CustomerDAO {
 
 	public String applyForLoan(Customer customer) {
 		String sql = "insert into LOAN_DATA(FIRST_NAME,LAST_NAME,FATHER_NAME,AGE,EMAIL,PHONE_NUMBER,ALTERNATIVE_PHONE_NUMBER,ACCOUNT_TYPE,CURRENT_ADDRESS,PERMANENT_ADDRESS,ADHAAR_NUMBER,PAN_NUMBER,"
-				+ "NOMINEE_NAME,NOMINEE_ADHAAR_NUMBER,NOMINEE_ACCOUNT_NUMBER,ACCOUNT_NUMBER,LOAN_ACCOUNT_NUMBER,LOAN_TYPE,ASSETS,HOW_MUCH_LOAN_REQUIRED) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+				+ "NOMINEE_NAME,NOMINEE_ADHAAR_NUMBER,NOMINEE_ACCOUNT_NUMBER,ACCOUNT_NUMBER,LOAN_ACCOUNT_NUMBER,LOAN_TYPE,ASSETS,LOAN_REQUESTED) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		try {
 			int result = jdbcTemplate.update(sql, customer.getFirstName(), customer.getLastName(),
 					customer.getFatherName(), customer.getAge(), customer.getEmail(), customer.getPhoneNumber(),
